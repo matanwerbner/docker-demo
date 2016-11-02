@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  web:
+    image: node:5.11.0-slim
+    working_dir: /code
+    command: bash ./init.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+      - "5858:5858"
